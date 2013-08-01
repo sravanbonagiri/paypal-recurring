@@ -4,7 +4,7 @@ require "paypal-recurring"
 
 Gem::Specification.new do |s|
   s.name        = "paypal-recurring"
- # s.version     = PayPalr::Recurring::Version::STRING
+  s.version     = "1.1.0"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Nando Vieira"]
   s.email       = ["fnando.vieira@gmail.com"]
