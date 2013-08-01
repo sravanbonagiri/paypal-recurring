@@ -1,13 +1,13 @@
 module PayPalr
   module Recurring
     module Response
-      autoload :Base, "PayPalr/recurring/response/base"
-      autoload :Checkout, "PayPalr/recurring/response/checkout"
-      autoload :Details, "PayPalr/recurring/response/details"
-      autoload :Payment, "PayPalr/recurring/response/payment"
-      autoload :ManageProfile, "PayPalr/recurring/response/manage_profile"
-      autoload :Profile, "PayPalr/recurring/response/profile"
-      autoload :Refund,  "PayPalr/recurring/response/refund"
+      autoload :Base, "paypalr/recurring/response/base"
+      autoload :Checkout, "paypalr/recurring/response/checkout"
+      autoload :Details, "paypalr/recurring/response/details"
+      autoload :Payment, "paypalr/recurring/response/payment"
+      autoload :ManageProfile, "paypalr/recurring/response/manage_profile"
+      autoload :Profile, "paypalr/recurring/response/profile"
+      autoload :Refund,  "paypalr/recurring/response/refund"
 
       RESPONDERS = {
         :checkout       => "Checkout",
