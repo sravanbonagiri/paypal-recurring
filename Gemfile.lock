@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    paypal-recurring (1.1.0)
+    paypalr-recurring (1.1.0)
 
 GEM
   remote: http://rubygems.org/
@@ -39,7 +39,7 @@ DEPENDENCIES
   activesupport
   awesome_print
   fakeweb
-  paypal-recurring!
+  paypalr-recurring!
   pry
   rake
   rspec
