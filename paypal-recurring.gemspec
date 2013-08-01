@@ -4,12 +4,12 @@ require "paypal-recurring"
 
 Gem::Specification.new do |s|
   s.name        = "paypal-recurring"
-  s.version     = PayPal::Recurring::Version::STRING
+  s.version     = PayPalr::Recurring::Version::STRING
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Nando Vieira"]
   s.email       = ["fnando.vieira@gmail.com"]
   s.homepage    = "http://rubygems.org/gems/paypal-recurring"
-  s.summary     = "PayPal Express Checkout API Client for recurring billing."
+  s.summary     = "PayPalr Express Checkout API Client for recurring billing."
   s.description = s.summary
 
   s.files         = `git ls-files`.split("\n")

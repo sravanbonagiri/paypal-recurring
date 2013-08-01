@@ -1,1 +1,1 @@
-require "paypal/recurring"
+require "paypalr/recurring"
