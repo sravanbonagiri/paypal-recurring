@@ -6,12 +6,12 @@ require "time"
 
 module PayPalr
   module Recurring
-    autoload :Base, "PayPalr/recurring/base"
-    autoload :Notification, "PayPalr/recurring/notification"
-    autoload :Request, "PayPalr/recurring/request"
-    autoload :Response, "PayPalr/recurring/response"
-    autoload :Version, "PayPalr/recurring/version"
-    autoload :Utils, "PayPalr/recurring/utils"
+    autoload :Base, "paypalr/recurring/base"
+    autoload :Notification, "paypalr/recurring/notification"
+    autoload :Request, "paypalr/recurring/request"
+    autoload :Response, "paypalr/recurring/response"
+    autoload :Version, "paypalr/recurring/version"
+    autoload :Utils, "paypalr/recurring/utils"
 
     ENDPOINTS = {
        :sandbox => {
