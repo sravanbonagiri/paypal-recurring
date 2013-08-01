@@ -1,7 +1,7 @@
 require "spec_helper"
 
-describe PayPal::Recurring::Response do
-  let(:response_class) { Class.new(PayPal::Recurring::Response::Base) }
+describe PayPalr::Recurring::Response do
+  let(:response_class) { Class.new(PayPalr::Recurring::Response::Base) }
 
   describe ".mapping" do
     it "returns single item mapping" do

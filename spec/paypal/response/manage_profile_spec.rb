@@ -1,7 +1,7 @@
 require "spec_helper"
 
-describe PayPal::Recurring::Response::ManageProfile do
-  let(:paypal) { PayPal::Recurring.new(:profile_id => "I-W4FNTE6EXJ2W") }
+describe PayPalr::Recurring::Response::ManageProfile do
+  let(:paypal) { PayPalr::Recurring.new(:profile_id => "I-W4FNTE6EXJ2W") }
 
   context "suspending" do
     context "when successful" do

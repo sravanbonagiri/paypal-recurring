@@ -1,11 +1,11 @@
 require "spec_helper"
 
-describe PayPal::Recurring::Response::Profile do
+describe PayPalr::Recurring::Response::Profile do
   context "when successful" do
     use_vcr_cassette "update_profile/success"
 
     let(:paypal) {
-      PayPal::Recurring.new({
+      PayPalr::Recurring.new({
         :description => "Awesome - Monthly Subscription (Updated)",
         :amount      => "10.00",
         :currency    => "BRL",
@@ -24,7 +24,7 @@ describe PayPal::Recurring::Response::Profile do
   context "updated profile" do
     use_vcr_cassette "update_profile/profile"
 
-    let(:paypal) { PayPal::Recurring.new(:profile_id => "I-6BWVV63V49JT") }
+    let(:paypal) { PayPalr::Recurring.new(:profile_id => "I-6BWVV63V49JT") }
     subject { paypal.profile }
 
     its(:amount) { should eql("10.00") }
@@ -35,7 +35,7 @@ describe PayPal::Recurring::Response::Profile do
     use_vcr_cassette("update_profile/failure")
 
     let(:paypal) {
-      PayPal::Recurring.new({
+      PayPalr::Recurring.new({
         :profile_id => "I-W4FNTE6EXJ2W",
         :amount     => "10.00"
       })

@@ -1,8 +1,8 @@
 require "spec_helper"
 
-describe PayPal::Recurring::Response::Profile do
+describe PayPalr::Recurring::Response::Profile do
   let(:paypal) {
-    PayPal::Recurring.new({
+    PayPalr::Recurring.new({
       :profile_id     => "I-1BASBJ9C9WBS",
       :transaction_id => "4GP25924UB013401J",
       :reference      => "12345",

@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe PayPal::Recurring::Request do
+describe PayPalr::Recurring::Request do
   describe "#client" do
     it "uses SSL" do
       subject.client.use_ssl?.should be_true
@@ -37,23 +37,23 @@ describe PayPal::Recurring::Request do
     end
 
     it "sets username" do
-      request["USER"].first.should == PayPal::Recurring.username
+      request["USER"].first.should == PayPalr::Recurring.username
     end
 
     it "sets password" do
-      request["PWD"].first.should == PayPal::Recurring.password
+      request["PWD"].first.should == PayPalr::Recurring.password
     end
 
     it "sets signature" do
-      request["SIGNATURE"].first.should == PayPal::Recurring.signature
+      request["SIGNATURE"].first.should == PayPalr::Recurring.signature
     end
 
     it "sets API version" do
-      request["VERSION"].first.should == PayPal::Recurring.api_version
+      request["VERSION"].first.should == PayPalr::Recurring.api_version
     end
 
     it "sets user agent" do
-      FakeWeb.last_request["User-Agent"].should == "PayPal::Recurring/#{PayPal::Recurring::Version::STRING}"
+      FakeWeb.last_request["User-Agent"].should == "PayPalr::Recurring/#{PayPalr::Recurring::Version::STRING}"
     end
   end
 

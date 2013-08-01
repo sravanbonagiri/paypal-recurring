@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 require "spec_helper"
 
-describe PayPal::Recurring::Response::Profile do
+describe PayPalr::Recurring::Response::Profile do
   context "when successful" do
     use_vcr_cassette "profile/success"
-    let(:paypal) { PayPal::Recurring.new(:profile_id => "I-W4FNTE6EXJ2W") }
+    let(:paypal) { PayPalr::Recurring.new(:profile_id => "I-W4FNTE6EXJ2W") }
     subject { paypal.profile }
 
     it { should_not be_active }
@@ -32,7 +32,7 @@ describe PayPal::Recurring::Response::Profile do
 
   context "when failure" do
     use_vcr_cassette "profile/failure"
-    let(:paypal) { PayPal::Recurring.new(:profile_id => "invalid") }
+    let(:paypal) { PayPalr::Recurring.new(:profile_id => "invalid") }
     subject { paypal.profile }
 
     it { should_not be_valid }

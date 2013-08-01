@@ -1,11 +1,11 @@
 require "spec_helper"
 
-describe PayPal::Recurring::Response::Profile do
+describe PayPalr::Recurring::Response::Profile do
   context "when successful" do
     use_vcr_cassette "create_profile/success"
 
     subject {
-      ppr = PayPal::Recurring.new({
+      ppr = PayPalr::Recurring.new({
         :amount                => "9.00",
         :initial_amount        => "9.00",
         :initial_amount_action => :cancel,
@@ -33,7 +33,7 @@ describe PayPal::Recurring::Response::Profile do
 
   context "when failure" do
     use_vcr_cassette("create_profile/failure")
-    subject { PayPal::Recurring.new.create_recurring_profile }
+    subject { PayPalr::Recurring.new.create_recurring_profile }
 
     it { should_not be_valid }
     its(:errors) { should have(5).items }

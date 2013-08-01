@@ -15,7 +15,7 @@ RSpec.configure do |config|
   config.extend VCR::RSpec::Macros
 
   config.before do
-    PayPal::Recurring.configure do |config|
+    PayPalr::Recurring.configure do |config|
       config.sandbox = true
       config.username = "fnando.vieira+seller_api1.gmail.com"
       config.password = "PRTZZX6JDACB95SA"

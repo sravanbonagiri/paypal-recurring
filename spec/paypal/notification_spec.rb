@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe PayPal::Recurring::Notification do
+describe PayPalr::Recurring::Notification do
   it "detects express checkout" do
     subject.params[:txn_type] = "express_checkout"
     subject.should be_express_checkout

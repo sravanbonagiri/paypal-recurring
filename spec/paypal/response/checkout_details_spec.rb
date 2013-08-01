@@ -1,11 +1,11 @@
 require "spec_helper"
 
-describe PayPal::Recurring::Response::Details do
+describe PayPalr::Recurring::Response::Details do
   context "when successful" do
     use_vcr_cassette "details/success"
 
     subject {
-      ppr = PayPal::Recurring.new(:token => "EC-08C2125544495393T")
+      ppr = PayPalr::Recurring.new(:token => "EC-08C2125544495393T")
       ppr.checkout_details
     }
 
@@ -28,7 +28,7 @@ describe PayPal::Recurring::Response::Details do
   context "when cancelled" do
     use_vcr_cassette "details/cancelled"
     subject {
-      ppr = PayPal::Recurring.new(:token => "EC-8J298813NS092694P")
+      ppr = PayPalr::Recurring.new(:token => "EC-8J298813NS092694P")
       ppr.checkout_details
     }
 
@@ -40,7 +40,7 @@ describe PayPal::Recurring::Response::Details do
 
   context "when failure" do
     use_vcr_cassette("details/failure")
-    subject { PayPal::Recurring.new.checkout_details }
+    subject { PayPalr::Recurring.new.checkout_details }
 
     it { should_not be_valid }
     it { should_not be_success }

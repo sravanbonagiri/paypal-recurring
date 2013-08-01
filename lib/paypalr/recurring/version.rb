@@ -1,4 +1,4 @@
-module PayPal
+module PayPalr
   module Recurring
     module Version
       MAJOR = 1
